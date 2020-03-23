@@ -49,9 +49,9 @@ class Song
     values = []
 
     self.class.column_names.each do |col_name|
-      binding.pry
       values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
+    binding.pry
     values.join(", ")
   end
 
