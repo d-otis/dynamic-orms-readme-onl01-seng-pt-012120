@@ -28,6 +28,7 @@ class Song
     attr_accessor col_name.to_sym
   end
 
+  # set attribute values via metaprogramming
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value)
